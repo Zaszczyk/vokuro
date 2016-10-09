@@ -1,5 +1,6 @@
 <?php
 namespace Vokuro\Controllers;
+use Vokuro\Examples\ExampleService;
 
 /**
  * Display the default index page.
@@ -12,7 +13,8 @@ class IndexController extends ControllerBase
      */
     public function indexAction()
     {
-        $this->view->setVar('logged_in', is_array($this->auth->getIdentity()));
-        $this->view->setTemplateBefore('public');
+        /** @var ExampleService $e */
+        $e = $this->getDI()->get('ExampleService');
+        $e->get();
     }
 }

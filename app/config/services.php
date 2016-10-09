@@ -177,3 +177,98 @@ $di->set('logger', function ($filename = null, $format = null) {
 
     return $logger;
 });
+
+
+$di->setShared('ExampleService', [
+    'className' => 'Vokuro\Examples\ExampleService',
+    'arguments' => [
+        [
+            'type' => 'service',
+            'name' => 'AService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'BService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'CService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'DService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'EService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'FService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'GService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'HService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'IService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'JService',
+        ],
+        [
+            'type' => 'service',
+            'name' => 'KService',
+        ],
+    ]
+]);
+
+$di->setShared('AService', [
+    'className' => 'Vokuro\Examples\AService',
+]);
+
+$di->setShared('BService', [
+    'className' => 'Vokuro\Examples\BService',
+]);
+
+$di->setShared('CService', [
+    'className' => 'Vokuro\Examples\CService',
+]);
+
+$di->setShared('DService', [
+    'className' => 'Vokuro\Examples\DService',
+]);
+
+$di->setShared('EService', [
+    'className' => 'Vokuro\Examples\EService',
+]);
+
+$di->setShared('FService', [
+    'className' => 'Vokuro\Examples\FService',
+]);
+
+$di->setShared('GService', [
+    'className' => 'Vokuro\Examples\GService',
+]);
+
+$di->setShared('HService', [
+    'className' => 'Vokuro\Examples\HService',
+]);
+
+$di->setShared('IService', [
+    'className' => 'Vokuro\Examples\IService',
+]);
+
+$di->setShared('JService', [
+    'className' => 'Vokuro\Examples\JService',
+]);
+
+$di->setShared('KService', [
+    'className' => 'Vokuro\Examples\KService',
+]);
